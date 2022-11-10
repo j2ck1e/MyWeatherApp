@@ -21,7 +21,7 @@ class MainFragment : Fragment() {
     private val fragmentList = listOf(HoursFragment.newInstance(), DaysFragment.newInstance())
     private lateinit var pLauncher: ActivityResultLauncher<String> // лаунчер разрешений
     private lateinit var binding: FragmentMainBinding
-    private val tabList = listOf("Hours", "Days")
+    private val tabList = listOf(R.string.tab_list_hours, R.string.tab_list_days)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +41,7 @@ class MainFragment : Fragment() {
         val adapter = VpAdapter(activity as FragmentActivity, fragmentList)
         vPager.adapter = adapter
         TabLayoutMediator(tabLayout ,vPager) { //  переключение между часами и днями
-            tab, position -> tab.text = tabList[position]
+            tab, position -> tab.text = getString(tabList[position])
         }.attach() // включение переключателя
     }
 
