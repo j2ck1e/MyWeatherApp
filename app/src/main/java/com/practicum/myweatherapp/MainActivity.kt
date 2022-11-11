@@ -7,6 +7,7 @@ import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.practicum.myweatherapp.databinding.ActivityMainBinding
+import com.practicum.myweatherapp.fragments.FirstFragment
 import com.practicum.myweatherapp.fragments.MainFragment
 import org.json.JSONObject
 
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportFragmentManager.beginTransaction().replace(R.id.placeHolder, MainFragment.newInstance()).commit() // накладываем фрагмент поверх MainActivity
+        supportFragmentManager.beginTransaction().replace(R.id.placeHolder, FirstFragment.newInstance()).commit() // накладываем фрагмент поверх MainActivity
     }
 
    /* private lateinit var binding: ActivityMainBinding

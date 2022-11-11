@@ -1,7 +1,19 @@
 <resources>
-    <string name="app_name">MyWeatherApp</string>
+    <string name="app_name" translatable="false">MyWeatherApp</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="tab_list_hours">Hours</string>
     <string name="tab_list_days">Days</string>
+
+    <string name="btCity_Moscow">Moscow</string>
+    <string name="btCity_London">London</string>
+    <string name="btCity_NewYork">NewYork</string>
+    <string name="btCity_Paris">Paris</string>
+    <string name="btCity_Berlin">Berlin</string>
+    <string name="btCity_Rome">Rome</string>
+    <string name="btCity_Beijing">Beijing</string>
+    <string name="btCity_Tokyo">Tokyo</string>
+    <string name="btCity_Cairo">Cairo</string>
+    <string name="btCity_Madrid">Madrid</string>
+
 </resources>

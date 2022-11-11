@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_list_hours">По часам</string>
+    <string name="tab_list_days">По дням</string>
+    <string name="btCity_Moscow">Москва</string>
+    <string name="btCity_London">Лондон</string>
+    <string name="btCity_NewYork">Нью Йорк</string>
+    <string name="btCity_Paris">Париж</string>
+    <string name="btCity_Berlin">Берлин</string>
+    <string name="btCity_Rome">Рим</string>
+    <string name="btCity_Beijing">Пекин</string>
+    <string name="btCity_Tokyo">Токио</string>
+    <string name="btCity_Cairo">Каир</string>
+    <string name="btCity_Madrid">Мадрид</string>
+</resources>
