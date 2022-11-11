@@ -19,7 +19,7 @@ class WeatherAdapter : ListAdapter<WeatherInfo, WeatherAdapter.Holder>(Comparato
         fun bind(item: WeatherInfo) = with(binding){
             tvListDate.text = item.time
             tvListCondition.text = item.condition
-            tvListTemp.text = item.currentTemp + "°C"
+            tvListTemp.text = item.currentTemp.ifEmpty { item.maxTemp + "/" + item.minTemp }
             Picasso.get().load("https:" + item.imageUrl).into(imList)
         }
     }

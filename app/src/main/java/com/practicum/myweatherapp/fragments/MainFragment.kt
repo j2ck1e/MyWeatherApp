@@ -130,6 +130,7 @@ class MainFragment : Fragment() {
             )
             list.add(item)
         }
+        model.liveDataList.value = list
         return list
     }
 
@@ -144,14 +145,7 @@ class MainFragment : Fragment() {
             mainObject.getJSONObject("current").getJSONObject("condition").getString("icon"),
             weatherItem.hours)
             model.liveDataCurrent.value = item
-        Log.d("MyLog", "City: ${item.city}," +
-                " date: ${item.time}," +
-                " temp: ${item.currentTemp}," +
-                " condition: ${item.condition}," +
-                " link: ${item.imageUrl}," +
-                " max: ${item.maxTemp}," +
-                " min: ${item.minTemp}," +
-                " hour: ${item.hours}")
+
     }
 
     companion object {
