@@ -8,16 +8,19 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.practicum.myweatherapp.R
 import com.practicum.myweatherapp.databinding.ListItemBinding
+import com.squareup.picasso.Picasso
 
 class WeatherAdapter : ListAdapter<WeatherInfo, WeatherAdapter.Holder>(Comparator()) {
 
     class Holder(view: View) : RecyclerView.ViewHolder(view){ // класс отвечает за отрисовку list_item
         val binding = ListItemBinding.bind(view)  // собираем все элементы из разметки list_item в один объект
 
+
         fun bind(item: WeatherInfo) = with(binding){
             tvListDate.text = item.time
             tvListCondition.text = item.condition
-            tvListTemp.text = item.currentTemp
+            tvListTemp.text = item.currentTemp + "°C"
+            Picasso.get().load("https:" + item.imageUrl).into(imList)
         }
     }
 
