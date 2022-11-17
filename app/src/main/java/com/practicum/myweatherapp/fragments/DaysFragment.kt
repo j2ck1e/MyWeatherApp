@@ -7,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-
 import com.practicum.myweatherapp.MainViewModel
-
 import com.practicum.myweatherapp.adapters.WeatherAdapter
 import com.practicum.myweatherapp.adapters.WeatherInfo
 import com.practicum.myweatherapp.databinding.FragmentDaysBinding

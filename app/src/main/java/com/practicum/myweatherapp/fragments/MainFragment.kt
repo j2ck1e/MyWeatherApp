@@ -1,6 +1,7 @@
 package com.practicum.myweatherapp.fragments
 
 import android.Manifest
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -12,11 +13,11 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.LifecycleOwner
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.tabs.TabLayoutMediator
+import com.practicum.myweatherapp.MainActivity
 import com.practicum.myweatherapp.MainViewModel
 import com.practicum.myweatherapp.R
 import com.practicum.myweatherapp.adapters.VpAdapter
@@ -24,7 +25,7 @@ import com.practicum.myweatherapp.adapters.WeatherInfo
 import com.practicum.myweatherapp.databinding.FragmentMainBinding
 import com.squareup.picasso.Picasso
 import org.json.JSONObject
-import kotlin.math.abs
+
 
 const val API_KEY = "8e4815cd5b2244ffa7f190506220411"
 
@@ -43,8 +44,11 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
+
         binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding.root
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -160,8 +164,10 @@ class MainFragment : Fragment() {
 
     }
 
+
     companion object {
 
+        lateinit var setDate: String
         lateinit var city: String
 
         @JvmStatic

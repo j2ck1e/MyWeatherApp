@@ -1,7 +1,6 @@
 package com.practicum.myweatherapp.fragments
 
 
-import android.content.Context
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat

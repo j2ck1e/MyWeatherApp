@@ -1,18 +1,18 @@
 package com.practicum.myweatherapp
 
+import android.content.SharedPreferences
+import android.content.SharedPreferences.Editor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.android.volley.Request
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
-import com.practicum.myweatherapp.databinding.ActivityMainBinding
+
 import com.practicum.myweatherapp.fragments.FirstFragment
 import com.practicum.myweatherapp.fragments.MainFragment
-import org.json.JSONObject
+
 
 //const val API_KEY = "8e4815cd5b2244ffa7f190506220411"
 class MainActivity : AppCompatActivity() {
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().replace(R.id.placeHolder, FirstFragment.newInstance()).commit() // накладываем фрагмент поверх MainActivity
     }
+
+
 
    /* private lateinit var binding: ActivityMainBinding
 

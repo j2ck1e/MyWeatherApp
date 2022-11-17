@@ -1,6 +1,5 @@
 package com.practicum.myweatherapp.adapters
 
-import java.util.concurrent.locks.Condition
 
 data class WeatherInfo(
     val city : String,
